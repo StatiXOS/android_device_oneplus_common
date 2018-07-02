@@ -17,6 +17,17 @@ PRODUCT_PACKAGES += \
     TriStateHandler \
     tri-state-key_daemon
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.oneplus
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/lights/android.hardware.light@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/init/android.hardware.light@2.0-service.rc
+
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    device/oneplus/common
+
 # Overlays
 PRODUCT_PACKAGES += \
     STXOnePlusFrameworks
