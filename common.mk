@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    device/oneplus/common
+# Alert Slider
+PRODUCT_PACKAGES += \
+    tri-state-key_daemon
+
+# SEPolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/oneplus/common/sepolicy/private
